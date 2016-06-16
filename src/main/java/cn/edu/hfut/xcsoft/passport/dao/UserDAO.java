@@ -1,10 +1,12 @@
-package cn.edu.hfut.xcsoft.passport;
+package cn.edu.hfut.xcsoft.passport.dao;
 
 import javax.transaction.Transactional;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import cn.edu.hfut.xcsoft.passport.model.User;
 
 @Repository
 @Transactional
@@ -19,8 +21,8 @@ public class UserDAO {
 	
 	public User validUser(String account, String password) {
 		return (User) sessionFactory.getCurrentSession()
-				.createQuery("FROM User u WHERE u.username = :username AND u.password = :password")
-				.setParameter("username", account)
+				.createQuery("FROM User u WHERE u.email = :email AND u.password = :password")
+				.setParameter("email", account)
 				.setParameter("password", password)
 				.uniqueResult();
 	}

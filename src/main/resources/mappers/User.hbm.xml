@@ -4,7 +4,7 @@
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name="cn.edu.hfut.xcsoft.passport.User" table="user">
+   <class name="cn.edu.hfut.xcsoft.passport.model.User" table="user">
       <meta attribute="class-description">
          This class contains the employee detail. 
       </meta>
@@ -13,5 +13,6 @@
       </id>
       <property name="username" column="username" type="string"/>
       <property name="password" column="password" type="string"/>
+      <property name="email" column="email" type="string"/>
    </class>
 </hibernate-mapping>

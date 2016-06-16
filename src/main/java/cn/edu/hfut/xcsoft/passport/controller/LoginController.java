@@ -1,4 +1,4 @@
-package cn.edu.hfut.xcsoft.passport;
+package cn.edu.hfut.xcsoft.passport.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import cn.edu.hfut.xcsoft.passport.dao.UserDAO;
+import cn.edu.hfut.xcsoft.passport.model.User;
 
 @Controller
 @RequestMapping("/login")
